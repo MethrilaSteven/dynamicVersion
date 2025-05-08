@@ -20,7 +20,7 @@ jobs:
           java-version: 17
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v4
+        uses: android-actions/setup-android@v2
 
       - name: Generate Dynamic Version
         id: versioning
@@ -39,7 +39,7 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: app-release.apk
           path: app/build/outputs/apk/release/app-release.apk
